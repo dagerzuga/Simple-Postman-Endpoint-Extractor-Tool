@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Postman Endpoint Extractor Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="postman-endpoint-extractor" class="title">Simple Postman Endpoint Extractor Tool</h1>
+        </header>
+
+        <main class="main" role="main">
+            <section class="upload-section">
+                <label for="file-input" class="file-label">
+                    <span class="file-label-text">Choose a Postman collection file</span>
+                    <input type="file" id="file-input" class="file-input js-file-input" accept=".json">
+                </label>
+                <button class="extract-button js-extract-button">Extract Endpoints</button>
+            </section>
+
+            <section class="result">
+                <div class="result-header">
+                    <button class="copy-all-button js-copy-all" style="display: none;">Copy All</button>
+                </div>
+                <ul class="endpoint-list js-endpoint-list"></ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="disclaimer">This tool doesn't store any kind of information.</p>
+            <a href="https://github.com/dagerzuga/Simple-Postman-Endpoint-Extractor-Tool">GitHub Repo</a>
+        </footer>
+    </div>
+
+    <div class="js-toast toast" hidden>
+        Content copied!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
